@@ -1,0 +1,21 @@
+import random
+name_num = int(input("How many players are there? "))
+names = [] #Will get all the names
+mainnumbering = [] #Will get all the numbers
+
+#Taking number of players and their names
+for i in range(name_num):
+    names_items = input("Enter player's name: ")
+    names.append(names_items)
+# print(names)
+
+#Getting all numbers from 1 to number of players
+for j in range(1, name_num + 1):
+    mainnumbering.append(j)
+# print(mainnumbering)
+
+random.shuffle(names)
+# print(names)
+
+for k in range(1, name_num + 1):
+    print(f"{k}: {names[k - 1]}")
